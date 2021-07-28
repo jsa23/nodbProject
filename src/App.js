@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import Buttons from './Components/buttons/Buttons'
+import AddPlayerForm from './Components/AddPlayerForm';
+import Buttons from './Components/buttons/Buttons';
 import './App.css';
 
 class App extends Component {
-    constructor() {
-      super();
+    constructor(props) {
+      super(props);
       
       this.state = {
         players: [],
+        showAddPlayer: false,
       }
     }
 
@@ -18,22 +20,26 @@ class App extends Component {
       .catch((err) => console.log(err))
     }
 
+    updatePlayers = (players) => {
+      this.setState({ players })
+    }
+
   
   render (){
   return (
-      <div className="App">
-    <div>
+    <div className="App">
+      <div>
       <header className="App-header">
       {this.state.players.map((player) => {
         return (
-          <div className="player-list">{player.name}<Buttons /> </div>
+          <div className="player-list">{player.name}<br/>{player.position}<Buttons /> </div>
         )
         })}
-        <Buttons />
-        <Buttons />
-        <Buttons />
-        <Buttons />
-        <Buttons />
+        {
+          this.state.showAddPlayer ?
+          <AddPlayerForm updateCars={this.updatePlayers}/> :
+          <button onClick={() => this.setState({ showAddPlayer: true })}>Populate Form</button>
+        }
         </header>
       </div>
     </div>

@@ -4,7 +4,7 @@ const players = [
         "position": "PG"
     },
     {
-        "name": "Donovon Mitchell",
+        "name": "Donovan Mitchell",
         "position": "SG"
     },
     {

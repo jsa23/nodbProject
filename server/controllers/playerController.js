@@ -16,7 +16,6 @@ function updatePlayer(req, res){
     
 }
 
-
 function deletePlayer(req, res){
     const { deleteId } = req.query;
     console.log({ deleteId })
@@ -31,5 +30,4 @@ module.exports = {
     getPlayers,
     updatePlayer,
     deletePlayer,
-
 }

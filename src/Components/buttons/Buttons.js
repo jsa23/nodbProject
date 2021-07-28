@@ -22,13 +22,14 @@ class Button extends Component {
     }
 
     
-    
+
     render() {
         return(
             <div>{this.state.player.points}
             <button onClick ={ () => this.handlePoints('clear')}> Reset Points </button> 
             <button onClick ={ () => this.handlePoints('three')}> 3-Points </button> 
             <button onClick ={ () => this.handlePoints('two')}> 2-Points </button> 
+            <button> Clear Player </button>
             </div>
     )}
 }
