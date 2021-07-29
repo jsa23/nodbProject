@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 
 class Button extends Component {
@@ -13,11 +12,11 @@ class Button extends Component {
 
     render() {
         return(
-            <div>{this.props.playerPoints}
-            <button onClick ={ () => this.props.handlePoints(0, this.props.playerId)}> Reset Points </button> 
-            <button onClick ={ () => this.props.handlePoints(3, this.props.playerId)}> 3-Points </button> 
-            <button onClick ={ () => this.props.handlePoints(2, this.props.playerId)}> 2-Points </button> 
-            <button onClick ={ () => this.props.handleDelete(this.props.playerId)}> Delete player</button>
+        <div className="button-row">{this.props.playerPoints}
+                <button onClick ={ () => this.props.handlePoints(2, this.props.playerId)}> 2-Points </button> 
+                <button onClick ={ () => this.props.handlePoints(3, this.props.playerId)}> 3-Points </button> 
+                <button onClick ={ () => this.props.handlePoints(0, this.props.playerId)}> Reset Points </button> 
+                <button onClick ={ () => this.props.handleDelete(this.props.playerId)}> Delete player</button>
             </div>
     )}
 }

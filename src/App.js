@@ -46,14 +46,16 @@ class App extends Component {
   render (){
   return (
     <div className="App">
-      <div>
       <header className="App-header">
       {this.state.players.map((player) => {  
         return (
           <div className="player-list">{player.name}<br/>{player.position}
-          <Buttons playerId={ player.id} playerPoints={player.points} 
-          handlePoints={this.handlePoints} 
-          handleDelete={this.handleDelete}/> </div>
+            <div className="button-list">
+            <Buttons playerId={ player.id} playerPoints={player.points} 
+            handlePoints={this.handlePoints} 
+            handleDelete={this.handleDelete}/> 
+            </div>
+          </div>
         )
         })}
         {
@@ -63,7 +65,7 @@ class App extends Component {
         }
         </header>
       </div>
-    </div>
+    
   )}
   }
 
