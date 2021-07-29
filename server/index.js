@@ -8,9 +8,9 @@ app.get('/api/players', getPlayers)
 
 app.post('/api/players', addPlayer)
 
-// app.put('/api/players', updatePlayer)
+app.put('/api/players/:playerid/:points', updatePlayer)
 
-// app.delete('/api/players', deletePlayer)
+app.delete('/api/players', deletePlayer)
 
 
 app.listen(3000, () => console.log('listening on 3000'))

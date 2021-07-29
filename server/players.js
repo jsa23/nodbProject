@@ -1,23 +1,35 @@
+const { v4: uuid } = require('uuid');
+
 const players = [
     {
         "name": 'Mike Conley',
-        "position": "PG"
+        "position": "PG",
+        "points": 0,
+        "id": uuid()
     },
     {
         "name": "Donovan Mitchell",
-        "position": "SG"
+        "position": "SG",
+        "points": 0,
+        "id": uuid()
     },
     {
         "name": "Bojan Bogdonovic",
-        "position": "SF"
+        "position": "SF",
+        "points": 0,
+        "id": uuid()
     },
     {
         "name": "Royce O' Neal",
-        "position": "PF"
+        "position": "PF",
+        "points": 0,
+        "id": uuid()
     },
     {
         "name": "Rudy Gobert",
-        "position": "C"
+        "position": "C",
+        "points": 0,
+        "id": uuid()
     }
 ]
 
